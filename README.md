@@ -1,4 +1,4 @@
-# chatprojectcpp
+# xeon-chat
 
 Multithreaded chat program made with C++.
 
