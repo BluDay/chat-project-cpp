@@ -1,4 +1,4 @@
-# chat-project-cpp
+# chatprojectcpp
 
 Multithreaded chat program made with C++.
 
