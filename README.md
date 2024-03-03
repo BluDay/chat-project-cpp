@@ -1,5 +1,5 @@
-# chat-project-cpp
+# xeon-chat
 
-Multithreaded chat program made with C++.
+Multithreaded CLI chat program made for a programming course task back in high school.
 
-Old project from my high school days.
+Sorry about the ugly code and architecture. xD
