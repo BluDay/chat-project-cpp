@@ -1,12 +1,12 @@
 /****************************************
-*										*
-*	server chat program made with C++	*
-*	Made by: Bachir Bouchemla			*
-*	Date: Late January 2017				*
-*	Purpose: School project				*
-*										*
-*		(o.0) 01000010 x 2 = ?			*
-*										*
+*                                       *
+*   server chat program made with C++   *
+*   Made by: Bachir Bouchemla           *
+*   Date: Late January 2017             *
+*   Purpose: School project             *
+*                                       *
+*       (o.0) 01000010 x 2 = ?          *
+*                                       *
 ****************************************/
 
 // Includes all essential, built in scripts to use.
@@ -37,7 +37,7 @@
 using namespace std;
 
 string programStatusDialogue[] = {
-	"Creating a server for Xeon Chat...",
+    "Creating a server for Xeon Chat...",
     "Server and socket successfully initialized!",
     "Server bind complete!",
     "Searching for active servers...",
@@ -46,7 +46,7 @@ string programStatusDialogue[] = {
 };
 
 string errorList[] = {
-	"Error: Could not create a server.",
+    "Error: Could not create a server.",
     "Error: Could not bind, a connection already exists.",
     "Error: Could not connect to server",
     "Error: Could not create thread..."
@@ -74,16 +74,16 @@ void *Type(void*);
 // Gets the current time of this device.
 string GetCurrentTime()
 {
-	string currentTime 	= "";
+    string currentTime  = "";
 
-	auto t  = time(0);
-	auto tm = *localtime(&t);
+    auto t  = time(0);
+    auto tm = *localtime(&t);
 
-	ostringstream oss;
-	oss << std::put_time(&tm, "%Y-%m-%d %H:%M");
-	currentTime = oss.str();
+    ostringstream oss;
+    oss << std::put_time(&tm, "%Y-%m-%d %H:%M");
+    currentTime = oss.str();
  
-	return currentTime;
+    return currentTime;
 }
 
 // Creates a task waits for desired seconds.
@@ -109,24 +109,24 @@ void PrintMessage(string text)
 // Prints an ASCII or text file
 void PrintAsciiArt()
 {
-	string line;
-	ifstream textFile ("asciiArt.txt");
+    string line;
+    ifstream textFile ("asciiArt.txt");
 
-	if (textFile.is_open())
-	{
-		while (getline(textFile, line))
-		{
-			cout << line << endl;
-		}
+    if (textFile.is_open())
+    {
+        while (getline(textFile, line))
+        {
+            cout << line << endl;
+        }
 
-		textFile.close();
-	}
+        textFile.close();
+    }
 }
 
 // Clears the current window
 void ClearWindow()
 {
-	cout << "\033[H\033[J";
+    cout << "\033[H\033[J";
 }
 
 void *Type(void*)
